@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""""""
+"""module contains class Server and his differents methods"""
 import csv
 import math
 from typing import List
@@ -28,6 +28,7 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """Retrieve a specific page of data from the dataset."""
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page > 0
 
