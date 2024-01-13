@@ -17,6 +17,6 @@ def update_topics(mongo_collection, name, topics):
         name (str): School name to update.
         topics (list of str): List of topics approached in the school.
     """
-    
+    query = {"name": name}
     update_data = {"$set": {"topics": topics}}
-    
+    mongo_collection.update_one(query, update_data)
